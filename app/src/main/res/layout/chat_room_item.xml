@@ -6,21 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:id="@+id/userLayout">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <ImageView
-            android:id="@+id/chatIV"
+            android:id="@+id/userImageCRI"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginRight="10dp"
+            android:src="@drawable/dummy_img"
             android:background="@drawable/round_outline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            />
 
+            />
         <TextView
+            android:id="@+id/newMsgs"
             android:layout_width="21dp"
             android:layout_height="27dp"
             android:background="@drawable/round_bubble"
@@ -32,7 +35,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintHorizontal_bias="5"
             app:layout_constraintVertical_bias="45"/>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,31 +42,38 @@
         android:orientation="vertical"
         android:gravity="center_vertical">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             >
 
             <TextView
+                android:id="@+id/userNameCRI"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="3dp"
-                android:gravity="left"
                 android:text="Hello World!1"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
-                android:textStyle="bold" />
-
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/msgTimeCRI"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
             <TextView
+                android:id="@+id/msgTimeCRI"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hello World!2"
-                android:gravity="end"
-                android:textColor="@android:color/darker_gray"/>
-        </LinearLayout>
+                android:textColor="@android:color/darker_gray"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toEndOf="@id/userNameCRI"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
+            android:id="@+id/userMsgCRI"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello World!3"
