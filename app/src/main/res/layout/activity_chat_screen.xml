@@ -55,8 +55,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:padding="10dp"
+            android:background="#f2f2f2"
             android:orientation="horizontal">
-
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_bubble"
+                android:textColor="@color/white"
+                android:src="@drawable/ic_emoji"
+                />
             <EditText
                 android:id="@+id/etMessage"
                 android:layout_width="0dp"
@@ -66,7 +74,20 @@
                 android:hint="Type message"
                 android:padding="12dp"
                 />
-
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_bubble"
+                android:textColor="@color/white"
+                android:src="@drawable/ic_camera"
+                />
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_bubble"
+                android:textColor="@color/white"
+                android:src="@drawable/ic_mic"
+                />
             <ImageButton
                 android:id="@+id/btnSendMessage"
                 android:layout_width="40dp"
