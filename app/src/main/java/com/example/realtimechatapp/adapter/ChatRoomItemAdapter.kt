@@ -1,4 +1,4 @@
-package com.example.realtimechatapp
+package com.example.realtimechatapp.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,11 +9,13 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.realtimechatapp.R
+import com.example.realtimechatapp.model.ChatRoomItem
 
 
 class ChatRoomItemAdapter(private var context: Context, private var userList: ArrayList<ChatRoomItem>) : RecyclerView.Adapter<ChatRoomItemAdapter.MyHolder>() {
     class MyHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val newMsgs: TextView = view.findViewById(R.id.newMsgs)
+        //val newMsgs: TextView = view.findViewById(R.id.newMsgs)
         val userImage: ImageView = view.findViewById(R.id.userImageCRI)
         val userName: TextView = view.findViewById(R.id.userNameCRI)
         val msgTime: TextView = view.findViewById(R.id.msgTimeCRI)
@@ -31,11 +33,12 @@ class ChatRoomItemAdapter(private var context: Context, private var userList: Ar
         holder.userName.text = user.userName
         holder.userMsg.text = user.userMsg
         holder.msgTime.text = user.msgTime
-        if (user.newMsgs != null)
+        /*if (user.newMsgs != null)
             holder.newMsgs.text = user.newMsgs
         else
-            holder.newMsgs.visibility = View.INVISIBLE
-        Glide.with(context).load(user.userImage).placeholder(R.drawable.dummy_img).into(holder.userImage)
+            holder.newMsgs.visibility = View.INVISIBLE*/
+        //Glide.with(context).load(user.userImage).placeholder(R.drawable.dummy_img).into(holder.userImage)
+        Glide.with(context).load(R.drawable.dummy_img).placeholder(R.drawable.dummy_img).into(holder.userImage)
 
         /*holder.userLayout.setOnClickListener {
             val intent = Intent(context,ChatActivity::class.java)
