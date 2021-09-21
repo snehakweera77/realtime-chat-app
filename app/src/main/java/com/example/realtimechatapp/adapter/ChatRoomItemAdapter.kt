@@ -1,6 +1,7 @@
 package com.example.realtimechatapp.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.realtimechatapp.R
+import com.example.realtimechatapp.activity.ChatScreenActivity
 import com.example.realtimechatapp.model.ChatRoomItem
+import kotlinx.android.synthetic.main.chat_room_item.*
 
 
 class ChatRoomItemAdapter(private var context: Context, private var userList: ArrayList<ChatRoomItem>) : RecyclerView.Adapter<ChatRoomItemAdapter.MyHolder>() {
@@ -46,7 +49,15 @@ class ChatRoomItemAdapter(private var context: Context, private var userList: Ar
             intent.putExtra("userName",user.userName)
             context.startActivity(intent)
         }*/
+        holder.userLayout.setOnClickListener {
+            val intent = Intent(context, ChatScreenActivity::class.java)
+            intent.putExtra("userId",user.userId)
+            intent.putExtra("userName",user.userName)
+            context.startActivity(intent)
+        }
     }
+
+
 
     override fun getItemCount(): Int {
         return userList.size

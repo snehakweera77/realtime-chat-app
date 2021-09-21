@@ -44,13 +44,5 @@ class MainActivity : AppCompatActivity() {
         val userAdapter = ChatRoomItemAdapter(this@MainActivity, userList)
         chatRV.adapter = userAdapter
 
-        /*userLayout.setOnClickListener {
-            val intent = Intent(
-                this,
-                ChatScreenActivity::class.java
-            )
-            startActivity(intent)
-        }
-*/
     }
 }
