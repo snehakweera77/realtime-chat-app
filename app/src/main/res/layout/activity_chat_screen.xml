@@ -66,7 +66,7 @@
                 android:src="@drawable/ic_emoji"
                 />
             <EditText
-                android:id="@+id/etMessage"
+                android:id="@+id/editMsg"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -89,7 +89,7 @@
                 android:src="@drawable/ic_mic"
                 />
             <ImageButton
-                android:id="@+id/btnSendMessage"
+                android:id="@+id/sendMsgBtn"
                 android:layout_width="40dp"
                 android:src="@drawable/ic_send"
                 android:background="@drawable/round_bubble"
