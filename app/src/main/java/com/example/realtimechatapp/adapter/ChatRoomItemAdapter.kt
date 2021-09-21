@@ -13,8 +13,6 @@ import com.bumptech.glide.Glide
 import com.example.realtimechatapp.R
 import com.example.realtimechatapp.activity.ChatScreenActivity
 import com.example.realtimechatapp.model.ChatRoomItem
-import kotlinx.android.synthetic.main.chat_room_item.*
-
 
 class ChatRoomItemAdapter(private var context: Context, private var userList: ArrayList<ChatRoomItem>) : RecyclerView.Adapter<ChatRoomItemAdapter.MyHolder>() {
     class MyHolder(view: View) : RecyclerView.ViewHolder(view) {
