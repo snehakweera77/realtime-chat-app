@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ChatScreenActivity">
+    tools:context=".ChatScreenActivity">
     <LinearLayout
         android:id="@+id/chatHeaderLL"
         android:layout_width="match_parent"
@@ -62,7 +62,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/round_bubble"
-                android:textColor="@color/white"
+                android:textColor="@color/colorWhite"
                 android:src="@drawable/ic_emoji"
                 />
             <EditText
@@ -78,14 +78,14 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/round_bubble"
-                android:textColor="@color/white"
+                android:textColor="@color/colorWhite"
                 android:src="@drawable/ic_camera"
                 />
             <ImageButton
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/round_bubble"
-                android:textColor="@color/white"
+                android:textColor="@color/colorWhite"
                 android:src="@drawable/ic_mic"
                 />
             <ImageButton
@@ -94,7 +94,7 @@
                 android:src="@drawable/ic_send"
                 android:background="@drawable/round_bubble"
                 android:layout_height="40dp"
-                android:textColor="@color/white"
+                android:textColor="@color/colorWhite"
                 android:text="Send"/>
 
         </LinearLayout>

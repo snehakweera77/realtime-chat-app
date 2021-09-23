@@ -14,32 +14,34 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        chatRV.setHasFixedSize(true)
+        chatRV.setItemViewCacheSize(13)
         chatRV.layoutManager = LinearLayoutManager(this)
         val userList = ArrayList<ChatRoomItem>()
         userList.add(
             ChatRoomItem("1",
-            "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg", "Vadim", "2020-10-03T14:48:00.000Z",
-            "btw, SpaceX is interested in buying notJust.dev!", "3")
+                "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg", "Vadim", "2020-10-03T14:48:00.000Z",
+                "btw, SpaceX is interested in buying notJust.dev!", "1")
         )
         userList.add(
             ChatRoomItem("1",
-            "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg", "Vadim", "2020-10-03T14:48:00.000Z",
-            "btw, SpaceX is interested in buying notJust.dev!", "3")
+                "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg", "Vadim", "2020-10-03T14:48:00.000Z",
+                "btw, SpaceX is interested in buying notJust.dev!")
         )
         userList.add(
             ChatRoomItem("1",
-            "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg", "Vadim", "2020-10-03T14:48:00.000Z",
-            "btw, SpaceX is interested in buying notJust.dev!", "3")
+                "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg", "Vadim", "2020-10-03T14:48:00.000Z",
+                "btw, SpaceX is interested in buying notJust.dev!", "3")
         )
         userList.add(
             ChatRoomItem("1",
-            "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg", "Vadim", "2020-10-03T14:48:00.000Z",
-            "btw, SpaceX is interested in buying notJust.dev!", "3")
+                "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg", "Vadim", "2020-10-03T14:48:00.000Z",
+                "btw, SpaceX is interested in buying notJust.dev!", "3")
         )
         userList.add(
             ChatRoomItem("1",
-            "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg", "Vadim", "2020-10-03T14:48:00.000Z",
-            "btw, SpaceX is interested in buying notJust.dev!", "3")
+                "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg", "Vadim", "2020-10-03T14:48:00.000Z",
+                "btw, SpaceX is interested in buying notJust.dev!", "3")
         )
         val userAdapter = ChatRoomItemAdapter(this@MainActivity, userList)
         chatRV.adapter = userAdapter

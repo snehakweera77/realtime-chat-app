@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.realtimechatapp"
-        minSdkVersion 24
+        minSdkVersion 26
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -50,6 +50,8 @@ dependencies {
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    //circle image view library
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
     //amplify
     implementation 'com.amplifyframework:aws-api:1.24.0'
     implementation 'com.amplifyframework:aws-datastore:1.24.0'

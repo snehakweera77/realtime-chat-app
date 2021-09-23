@@ -22,6 +22,7 @@ class ChatRoomItemAdapter(private var context: Context, private var userList: Ar
         val msgTime: TextView = view.findViewById(R.id.msgTimeCRI)
         val userMsg: TextView = view.findViewById(R.id.userMsgCRI)
         val userLayout: LinearLayout = view.findViewById(R.id.userLayout)
+        val newMsgs: TextView = view.findViewById(R.id.newMsgs)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
@@ -34,12 +35,11 @@ class ChatRoomItemAdapter(private var context: Context, private var userList: Ar
         holder.userName.text = user.userName
         holder.userMsg.text = user.userMsg
         holder.msgTime.text = user.msgTime
-        /*if (user.newMsgs != null)
+        if (user.newMsgs != "")
             holder.newMsgs.text = user.newMsgs
         else
-            holder.newMsgs.visibility = View.INVISIBLE*/
-        //Glide.with(context).load(user.userImage).placeholder(R.drawable.dummy_img).into(holder.userImage)
-        Glide.with(context).load(R.drawable.dummy_img).placeholder(R.drawable.dummy_img).into(holder.userImage)
+            holder.newMsgs.visibility = View.INVISIBLE
+        Glide.with(context).load(user.userImage).placeholder(R.drawable.ic_default_user).into(holder.userImage)
 
         /*holder.userLayout.setOnClickListener {
             val intent = Intent(context,ChatActivity::class.java)
