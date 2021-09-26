@@ -4,13 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.EditText
 import android.widget.Toast
-import com.amplifyframework.auth.AuthException
-import com.amplifyframework.auth.result.AuthSignInResult
 import com.amplifyframework.core.Amplify
-import com.amplifyframework.core.Consumer
 import com.example.realtimechatapp.R
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -38,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
         )
         }
         joinBtn.setOnClickListener{
-            val intent = Intent(this, JoinActivity::class.java)
+            val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
     }
