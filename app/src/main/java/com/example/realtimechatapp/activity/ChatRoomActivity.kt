@@ -75,7 +75,7 @@ class ChatRoomActivity : AppCompatActivity() {
             Where.matches(ChatRoomUser.USER.eq(currentUser.userId)),
             {chatRoomsUsers -> runOnUiThread {
                 while (chatRoomsUsers.hasNext()) {
-                    chatRoomsList.add(chatRoomsUsers.next().chatRoom)
+                    chatRoomsList.add(chatRoomsUsers.next().chatroom)
                     userAdapter.notifyDataSetChanged()
                 }
             } },
